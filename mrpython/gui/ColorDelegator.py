@@ -2,10 +2,10 @@ import time
 import re
 import keyword
 import builtins
-from Delegator import Delegator
-from configHandler import MrPythonConf
+from mrpython.Delegator import Delegator
+from mrpython.configHandler import MrPythonConf
 
-from typechecking.type_ast import PREDEFINED_TYPE_VARIABLES
+from mrpython.typechecking.type_ast import PREDEFINED_TYPE_VARIABLES
 
 DEBUG = False
 

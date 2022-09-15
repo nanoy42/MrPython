@@ -1,5 +1,5 @@
 from code import InteractiveInterpreter
-from RunReport import RunReport
+from .RunReport import RunReport
 import ast
 import tokenize
 import sys
@@ -7,34 +7,33 @@ import traceback
 import os
 import copy
 
-from translate import tr
+from .translate import tr
 
-import studentlib.gfx.image
-import studentlib.gfx.img_canvas
+from mrpython.studentlib.gfx import image, img_canvas
 
 import typing
 
-from typechecking.typechecker import typecheck_from_ast
-from typechecking.type_ast import PREDEFINED_TYPE_VARIABLES
+from mrpython.typechecking.typechecker import typecheck_from_ast
+from mrpython.typechecking.type_ast import PREDEFINED_TYPE_VARIABLES
 
 def install_locals(locals):
     # install the gfx lib
 
     #locals = { k:v for (k,v) in locs.items() }
-    locals['draw_line'] = studentlib.gfx.image.draw_line
-    locals['line'] = studentlib.gfx.image.draw_line
-    locals['draw_triangle'] = studentlib.gfx.image.draw_triangle
-    locals['triangle'] = studentlib.gfx.image.draw_triangle
-    locals['fill_triangle'] = studentlib.gfx.image.fill_triangle
-    locals['filled_triangle'] = studentlib.gfx.image.fill_triangle
-    locals['draw_ellipse'] = studentlib.gfx.image.draw_ellipse
-    locals['ellipse'] = studentlib.gfx.image.draw_ellipse
-    locals['fill_ellipse'] = studentlib.gfx.image.fill_ellipse
-    locals['filled_ellipse'] = studentlib.gfx.image.fill_ellipse
-    locals['overlay'] = studentlib.gfx.image.overlay
-    locals['underlay'] = studentlib.gfx.image.underlay
-    locals['empty_image'] = studentlib.gfx.image.empty_image
-    locals['show_image'] = studentlib.gfx.img_canvas.show_image
+    locals['draw_line'] = image.draw_line
+    locals['line'] = image.draw_line
+    locals['draw_triangle'] = image.draw_triangle
+    locals['triangle'] = image.draw_triangle
+    locals['fill_triangle'] = image.fill_triangle
+    locals['filled_triangle'] = image.fill_triangle
+    locals['draw_ellipse'] = image.draw_ellipse
+    locals['ellipse'] = image.draw_ellipse
+    locals['fill_ellipse'] = image.fill_ellipse
+    locals['filled_ellipse'] = image.fill_ellipse
+    locals['overlay'] = image.overlay
+    locals['underlay'] = image.underlay
+    locals['empty_image'] = image.empty_image
+    locals['show_image'] = img_canvas.show_image
 
     # install the typing module
     locals['Sequence'] = typing.Sequence
@@ -319,7 +318,7 @@ class FunCallsVisitor(ast.NodeVisitor):
             self.funcalls.add(node.func.id)
         self.visit_children(node)
 
-from typechecking.typechecker import preconditions
+from mrpython.typechecking.typechecker import preconditions
 
 preconditionsLineno = []
 

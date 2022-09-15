@@ -10,7 +10,7 @@ windows.
 """
 #from importlib.util import find_spec
 
-from configHandler import MrPythonConf
+from .configHandler import MrPythonConf
 
 #   Warning: menudefs is altered in macosxSupport.overrideRootMenu()
 #   after it is determined that an OS X Aqua Tk is in use,

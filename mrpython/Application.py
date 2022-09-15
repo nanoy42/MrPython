@@ -1,16 +1,16 @@
-from gui.MainView import MainView
+from .gui.MainView import MainView
 from tkinter import Tk, sys
-from gui.PyEditor import PyEditor
-import Bindings
+from .gui.PyEditor import PyEditor
+from . import Bindings
 
 
-from gui.PyEditorFrame import PyEditorFrame
+from mrpython.gui.PyEditorFrame import PyEditorFrame
 
-from translate import tr, set_translator_locale
+from mrpython.translate import tr, set_translator_locale
 
 import multiprocessing as mp
 
-from RunReport import RunReport
+from mrpython.RunReport import RunReport
 
 class Application:
     """
@@ -243,7 +243,11 @@ class Application:
         file_name = self.editor_list.get_current_editor().long_title()
         self.console.runit(file_name)
 
-if __name__ == "__main__":
+def main():
     mp.set_start_method('spawn')
     app = Application()
     app.run()
+
+
+if __name__ == "__main__":
+    main()

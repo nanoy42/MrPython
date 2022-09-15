@@ -1,6 +1,6 @@
 from tkinter import *
 from platform import python_version
-from translate import tr
+from mrpython.translate import tr
 
 class StatusBar(Frame):
     """

@@ -1,5 +1,5 @@
 from .WidgetRedirector import WidgetRedirector
-from Delegator import Delegator
+from mrpython.Delegator import Delegator
 
 class Percolator:
 

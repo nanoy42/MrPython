@@ -10,7 +10,7 @@ import re
 from tkinter import *
 from tkinter.simpledialog import askstring
 
-from configHandler import MrPythonConf
+from mrpython.configHandler import MrPythonConf
 
 from codecs import BOM_UTF8
 

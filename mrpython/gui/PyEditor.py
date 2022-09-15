@@ -6,13 +6,13 @@ import tkinter.simpledialog as tkSimpleDialog
 from tkinter.font import Font, nametofont
 
 from tkinter import *
-from configHandler import MrPythonConf
-from Search import SearchDialog
-from Search import GrepDialog
-from Search import ReplaceDialog
-import PyParse
+from mrpython.configHandler import MrPythonConf
+from mrpython.Search import SearchDialog
+from mrpython.Search import GrepDialog
+from mrpython.Search import ReplaceDialog
+import mrpython.PyParse as PyParse
 import sys
-import Bindings
+import mrpython.Bindings as Bindings
 
 from .HighlightingText import HighlightingText
 _py_version = ' (%s)' % platform.python_version()

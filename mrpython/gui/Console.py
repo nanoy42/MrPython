@@ -1,15 +1,15 @@
 from platform import python_version
 from tkinter import *
 from tkinter.font import Font, nametofont
-from PyInterpreter import InterpreterProxy
+from mrpython.PyInterpreter import InterpreterProxy
 from .WidgetRedirector import WidgetRedirector
 
 from .HyperlinkManager import HyperlinkManager
 
-import version
-from translate import tr
+from mrpython import version
+from mrpython.translate import tr
 import io
-import rpc
+from mrpython import rpc
 import sys
 
 class ConsoleHistory:
@@ -120,7 +120,7 @@ class Console:
 
     from .ModifiedColorDelegator import ModifiedColorDelegator
     from .ModifiedUndoDelegator import ModifiedUndoDelegator
-    from IdleHistory import History
+    from mrpython.IdleHistory import History
 
     SHELL_TITLE = "Python " + python_version() + " Shell"
     TEXT_COLORS_BY_MODE = {
@@ -177,7 +177,7 @@ class Console:
         self.frame_input.columnconfigure(1, weight=1)
 
 	# Redirect the Python output, input and error stream to the console
-        import gui.IOBinding as IOBinding
+        import mrpython.gui.IOBinding as IOBinding
         self.stdin = PseudoInputFile(self, "error", IOBinding.encoding)
         self.stdout = PseudoOutputFile(self, "error", IOBinding.encoding)
         self.stderr = PseudoOutputFile(self, "error", IOBinding.encoding)

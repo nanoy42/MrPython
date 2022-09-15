@@ -17,7 +17,7 @@ class PyEditorList(CloseableNotebook):
     Manages the PyEditor widgets, in editor interface
     """
     def __init__(self,parent):
-        from configHandler import MrPythonConf
+        from mrpython.configHandler import MrPythonConf
         CloseableNotebook.__init__(self, parent)#), height=500)
         self.parent = parent
         self.sizetab = 0

@@ -1,7 +1,7 @@
 from tkinter import *
 
-from Search import SearchEngine
-from Search.SearchDialogBase import SearchDialogBase
+from . import SearchEngine
+from .SearchDialogBase import SearchDialogBase
 
 def _setup(text):
     root = text._root()

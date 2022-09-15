@@ -1,5 +1,5 @@
 
-from translate import tr
+from .translate import tr
 
 class ErrorReport:
     def __init__(self, severity, err_type, line, offset, details):

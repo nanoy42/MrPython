@@ -1,6 +1,6 @@
 from tkinter import *
 
-from translate import tr
+from mrpython.translate import tr
 from .tooltip import ToolTip
 
 import os

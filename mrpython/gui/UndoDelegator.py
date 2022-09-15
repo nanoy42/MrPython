@@ -1,7 +1,7 @@
 import string
 from tkinter import *
 
-from Delegator import Delegator
+from mrpython.Delegator import Delegator
 
 #$ event <<redo>>
 #$ win <Control-y>

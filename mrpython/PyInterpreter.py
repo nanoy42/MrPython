@@ -1,7 +1,7 @@
-from StudentRunner import StudentRunner
-from FullRunner import FullRunner
-from translate import tr
-from RunReport import RunReport
+from .StudentRunner import StudentRunner
+from .FullRunner import FullRunner
+from .translate import tr
+from .RunReport import RunReport
 
 import multiprocessing as mp
 

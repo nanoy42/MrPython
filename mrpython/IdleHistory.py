@@ -1,6 +1,6 @@
 "Implement MrPython Shell history mechanism with History class"
 
-from configHandler import MrPythonConf
+from mrpython.configHandler import MrPythonConf
 
 class History:
     ''' Implement MrPython Shell history mechanism.
